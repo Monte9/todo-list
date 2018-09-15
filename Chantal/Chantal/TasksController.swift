@@ -89,4 +89,47 @@ extension TasksController {
         return 45
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) {(action, sourceView, completionHandler) in
+            
+            let isDone = self.taskStore.tasks[indexPath.section][indexPath.row].isDone
+            
+            self.taskStore.removeTask(at: indexPath.row, isDone: isDone)
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            completionHandler(true)
+        }
+        
+        deleteAction.image = #imageLiteral(resourceName: "delete")
+        deleteAction.backgroundColor = #colorLiteral(red: 0.8509803922, green: 0.368627451, blue: 0.3215686275, alpha: 1)
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let doneAction = UIContextualAction(style: .normal, title: nil) {(action, sourceView, completionHandler) in
+            
+            self.taskStore.tasks[0][indexPath.row].isDone = true
+            
+            let doneTask = self.taskStore.removeTask(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            self.taskStore.add(doneTask, at: 0, isDone: true)
+            
+            let indexPath = IndexPath(row: 0, section: 1)
+            tableView.insertRows(at: [indexPath], with: .automatic)
+            
+            completionHandler(true)
+        }
+        
+        doneAction.image = #imageLiteral(resourceName: "done")
+        doneAction.backgroundColor = #colorLiteral(red: 0.09411764706, green: 0.5960784314, blue: 0.368627451, alpha: 1)
+        
+        return indexPath.section == 0 ? UISwipeActionsConfiguration(actions: [doneAction]) : nil
+    }
+    
 }
