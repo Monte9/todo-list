@@ -18,8 +18,11 @@ class TasksController: UITableViewController {
         }
     }
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad();
+        
+        tableView.tableFooterView = UIView()
     }
     
     @IBAction func addTask(_ sender: UIBarButtonItem) {
@@ -109,7 +112,7 @@ extension TasksController {
         }
         
         deleteAction.image = #imageLiteral(resourceName: "delete")
-        deleteAction.backgroundColor = #colorLiteral(red: 0.8509803922, green: 0.368627451, blue: 0.3215686275, alpha: 1)
+        deleteAction.backgroundColor = #colorLiteral(red: 0.8784313725, green: 0.4901960784, blue: 0.4823529412, alpha: 1)
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
@@ -133,7 +136,7 @@ extension TasksController {
         }
         
         doneAction.image = #imageLiteral(resourceName: "done")
-        doneAction.backgroundColor = #colorLiteral(red: 0.09411764706, green: 0.5960784314, blue: 0.368627451, alpha: 1)
+        doneAction.backgroundColor = #colorLiteral(red: 0.231372549, green: 0.7411764706, blue: 0.6509803922, alpha: 1)
         
         return indexPath.section == 0 ? UISwipeActionsConfiguration(actions: [doneAction]) : nil
     }
