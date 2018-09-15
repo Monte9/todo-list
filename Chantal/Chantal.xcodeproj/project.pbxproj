@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EC556544214D78A8003383B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC556543214D78A8003383B8 /* AppDelegate.swift */; };
-		EC556546214D78A8003383B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC556545214D78A8003383B8 /* ViewController.swift */; };
 		EC556549214D78A8003383B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC556547214D78A8003383B8 /* Main.storyboard */; };
 		EC55654B214D78A9003383B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC55654A214D78A9003383B8 /* Assets.xcassets */; };
 		EC55654E214D78A9003383B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC55654C214D78A9003383B8 /* LaunchScreen.storyboard */; };
+		EC556556214D81CD003383B8 /* TasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC556555214D81CD003383B8 /* TasksController.swift */; };
+		EC556558214D92A9003383B8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC556557214D92A9003383B8 /* Task.swift */; };
+		EC55655A214D9319003383B8 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC556559214D9319003383B8 /* TaskStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC556540214D78A8003383B8 /* Chantal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chantal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC556543214D78A8003383B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC556545214D78A8003383B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC556548214D78A8003383B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC55654A214D78A9003383B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC55654D214D78A9003383B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC55654F214D78A9003383B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC556555214D81CD003383B8 /* TasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksController.swift; sourceTree = "<group>"; };
+		EC556557214D92A9003383B8 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		EC556559214D9319003383B8 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				EC556543214D78A8003383B8 /* AppDelegate.swift */,
-				EC556545214D78A8003383B8 /* ViewController.swift */,
 				EC556547214D78A8003383B8 /* Main.storyboard */,
 				EC55654A214D78A9003383B8 /* Assets.xcassets */,
 				EC55654C214D78A9003383B8 /* LaunchScreen.storyboard */,
 				EC55654F214D78A9003383B8 /* Info.plist */,
+				EC556555214D81CD003383B8 /* TasksController.swift */,
+				EC556557214D92A9003383B8 /* Task.swift */,
+				EC556559214D9319003383B8 /* TaskStore.swift */,
 			);
 			path = Chantal;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC556546214D78A8003383B8 /* ViewController.swift in Sources */,
+				EC556556214D81CD003383B8 /* TasksController.swift in Sources */,
+				EC556558214D92A9003383B8 /* Task.swift in Sources */,
+				EC55655A214D9319003383B8 /* TaskStore.swift in Sources */,
 				EC556544214D78A8003383B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

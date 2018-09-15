@@ -8,6 +8,14 @@
 
 import UIKit
 
+extension UINavigationController {
+    
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +24,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let taskStore = TaskStore()
+
+        // Static tasks init
+//        let todoTasks = [Task(name: "Finish To-do list app"), Task(name: "Go grocery shopping"), Task(name: "Watch Tech videos"), Task(name: "Solve Leetcode problems")]
+//        let doneTasks = [Task(name: "Do Laundry"), Task(name: "Eat Pizza")]
+//
+//        taskStore.tasks = [todoTasks, doneTasks]
+        
+        let taskController = window?.rootViewController?.childViewControllers.first as? TasksController
+        taskController?.taskStore = taskStore
+        
         return true
     }
 
