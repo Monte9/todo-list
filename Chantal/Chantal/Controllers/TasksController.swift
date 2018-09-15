@@ -10,7 +10,13 @@ import UIKit
 
 class TasksController: UITableViewController {
     
-    var taskStore: TaskStore!
+    var taskStore: TaskStore! {
+        didSet {
+            taskStore.tasks = TasksUtility.fetch() ?? [[Task](), [Task]()]
+            
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -50,9 +56,9 @@ class TasksController: UITableViewController {
     @objc private func handleTextChanged(_ sender: UITextField) {
         
         guard let alertController = presentedViewController as? UIAlertController,
-            let addAction = alertController.actions.first,
-            let text = sender.text
-        else { return }
+              let addAction = alertController.actions.first,
+              let text = sender.text
+              else { return }
         
         addAction.isEnabled = !text.trimmingCharacters(in: .whitespaces).isEmpty
     }
@@ -93,7 +99,7 @@ extension TasksController {
         
         let deleteAction = UIContextualAction(style: .destructive, title: nil) {(action, sourceView, completionHandler) in
             
-            let isDone = self.taskStore.tasks[indexPath.section][indexPath.row].isDone
+            guard let isDone = self.taskStore.tasks[indexPath.section][indexPath.row].isDone else { return }
             
             self.taskStore.removeTask(at: indexPath.row, isDone: isDone)
             

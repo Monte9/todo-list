@@ -21,12 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let taskStore = TaskStore()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let taskStore = TaskStore()
-
         // Static tasks init
 //        let todoTasks = [Task(name: "Finish To-do list app"), Task(name: "Go grocery shopping"), Task(name: "Watch Tech videos"), Task(name: "Solve Leetcode problems")]
 //        let doneTasks = [Task(name: "Do Laundry"), Task(name: "Eat Pizza")]
@@ -47,6 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        // Save tasks
+        TasksUtility.save(self.taskStore.tasks)
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -59,6 +61,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        // Save tasks
+        TasksUtility.save(self.taskStore.tasks)
     }
 
 

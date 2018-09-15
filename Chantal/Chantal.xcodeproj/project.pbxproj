@@ -14,6 +14,7 @@
 		EC556556214D81CD003383B8 /* TasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC556555214D81CD003383B8 /* TasksController.swift */; };
 		EC556558214D92A9003383B8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC556557214D92A9003383B8 /* Task.swift */; };
 		EC55655A214D9319003383B8 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC556559214D9319003383B8 /* TaskStore.swift */; };
+		EC556560214DBA34003383B8 /* TasksUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC55655F214DBA34003383B8 /* TasksUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EC556555214D81CD003383B8 /* TasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksController.swift; sourceTree = "<group>"; };
 		EC556557214D92A9003383B8 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		EC556559214D9319003383B8 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		EC55655F214DBA34003383B8 /* TasksUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,49 @@
 		EC556542214D78A8003383B8 /* Chantal */ = {
 			isa = PBXGroup;
 			children = (
-				EC556543214D78A8003383B8 /* AppDelegate.swift */,
 				EC556547214D78A8003383B8 /* Main.storyboard */,
+				EC55655D214DB9CA003383B8 /* Models */,
+				EC55655B214DB9B6003383B8 /* Controllers */,
+				EC55655C214DB9C2003383B8 /* Helpers */,
+				EC55655E214DB9D3003383B8 /* System */,
+			);
+			path = Chantal;
+			sourceTree = "<group>";
+		};
+		EC55655B214DB9B6003383B8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC556555214D81CD003383B8 /* TasksController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EC55655C214DB9C2003383B8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EC556559214D9319003383B8 /* TaskStore.swift */,
+				EC55655F214DBA34003383B8 /* TasksUtility.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EC55655D214DB9CA003383B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC556557214D92A9003383B8 /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC55655E214DB9D3003383B8 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				EC556543214D78A8003383B8 /* AppDelegate.swift */,
 				EC55654A214D78A9003383B8 /* Assets.xcassets */,
 				EC55654C214D78A9003383B8 /* LaunchScreen.storyboard */,
 				EC55654F214D78A9003383B8 /* Info.plist */,
-				EC556555214D81CD003383B8 /* TasksController.swift */,
-				EC556557214D92A9003383B8 /* Task.swift */,
-				EC556559214D9319003383B8 /* TaskStore.swift */,
 			);
-			path = Chantal;
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +179,7 @@
 				EC556556214D81CD003383B8 /* TasksController.swift in Sources */,
 				EC556558214D92A9003383B8 /* Task.swift in Sources */,
 				EC55655A214D9319003383B8 /* TaskStore.swift in Sources */,
+				EC556560214DBA34003383B8 /* TasksUtility.swift in Sources */,
 				EC556544214D78A8003383B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B65QRQ98UJ;
-				INFOPLIST_FILE = Chantal/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Chantal/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B65QRQ98UJ;
-				INFOPLIST_FILE = Chantal/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Chantal/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
