@@ -2,12 +2,8 @@
   <img alt="logo" src="https://i.imgur.com/xXsWLLG.png" width="90">
 </p>
 
-<br />
-
 <p align="center">
-  <b>Chantal App</b>
-  <br />
-  <i>To-do list iOS app</i>
+  <b>To-do list iOS app</b>
 </p>
 
 ## Demo
@@ -23,9 +19,3 @@ Hence I decided to referesh my knowledge and learn how to build a simple To-do l
 ## Course
 
 I found [this](https://www.udemy.com/ios-swift-build-a-to-do-list-app) really short and helpful course on Udemy that walks you through how to build a to-do list app.
-
-## Additional
-
-Curious to know what the name of the project means?
-
-[Here's the definition of Chantal on Urban Dictionary](https://www.urbandictionary.com/define.php?term=Chantal)
